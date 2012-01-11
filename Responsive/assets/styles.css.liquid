@@ -312,7 +312,7 @@ ul li {
     border-bottom: 4px double #d3d3d3;
   {% endif %}
 
-  margin: 20px auto 0;
+  margin: 0 auto 0;
   min-height: 35px;
   padding: 10px 0 0;
 }
@@ -793,7 +793,7 @@ ul li {
   }
   
   div.content {
-    padding: 15px 0px;
+    padding: 0px 0px;
     
     {% if settings.shop_use_content_bg_color %}
      background-color: {{ settings.shop_content_bg_color }};
@@ -801,7 +801,7 @@ ul li {
   }
 
   .logo {
-      padding-top: 10px;
+      padding-top: 5px;
       text-align: center;
   }
 
@@ -1364,4 +1364,11 @@ ul li {
 
 .top_bar .sticker span {
 	margin: 0 0 0 26px;
+}
+
+.tagline h1 {
+	margin: 0 auto 10px;
+	padding: 0;
+	border-bottom: none;
+	line-height: 36px;
 }
