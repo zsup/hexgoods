@@ -266,12 +266,12 @@ ul li {
 }
 
 .top_bar a.cart {
-  background: url({{ 'cart.png' | asset_url }}) no-repeat left 9px;
-  padding-left: 22px;
+  background: url({{ 'cart.png' | asset_url }}) no-repeat left 4px;
+  padding-left: 24px;
 }
 
 .top_bar a.cart:hover {
-  background-position: left -26px;
+  background-position: left -22px;
 }
 
 .top_bar span.products_count {
@@ -1334,3 +1334,34 @@ ul li {
 		background: #bbb;
 		color: #333; }
 	#grid .example-grid { overflow: hidden; }
+	
+/* #Custom additions for Hex Goods
+================================================== */
+
+.top_bar .sticker {
+	text-align: left;
+	{% if settings.top_bar_typeface_method == "google_webfonts" %}
+		font-family: {{ settings.top_bar_google_webfont_font | replace: '+', ' ' }};
+	{% else %}
+		font-family: {{ settings.top_bar_websafe_font | replace: '+', ' ' | replace: 'Helvetica', '"HelveticaNeue", "Helvetica Neue", Helvetica' }};
+	{% endif %}  
+
+	font-weight: {{ settings.top_bar_weight }};      
+	font-size: {{ settings.top_bar_font_size }}px; 
+	text-transform: {{ settings.top_bar_font_style}};
+	color: {{ settings.top_bar_color}};
+
+	letter-spacing: 1px;
+	/* EDIT: Remove text-shadow
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, .4);
+	*/
+	display:block;
+	height: 30px;
+	line-height: 30px;
+	
+	background: url({{ 'truck.png' | asset_url }}) no-repeat left 5px;
+}
+
+.top_bar .sticker span {
+	margin: 0 0 0 26px;
+}

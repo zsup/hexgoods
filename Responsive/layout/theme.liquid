@@ -94,9 +94,14 @@
               <input type="text" name="q" class="search_box" placeholder="Search..." value="{{ search.terms }}" x-webkit-speech />
             </form>
           </div>
-        {% endif %}        
+        {% endif %}
+
+    		<!-- EDIT: Added free shipping -->
+			<div class="eight columns sticker">
+				<span>Free shipping</span>
+			</div>
         
-        <div class="eight columns {% unless settings.search_box_top_bar %} offset-by-eight {% endunless %}">
+        <div class="eight columns {% unless settings.search_box_top_bar %} {% endunless %}">
           <ul>
             <li>
               {% if cart.item_count == 0 %}
@@ -245,7 +250,7 @@
           <div class="eight columns omega">
 
             {% if settings.newsletter_enabled %}
-              <h6>Newsletter</h6>
+              <h6>Sign up for updates</h6>
             
               {% if settings.newsletter_system == 'mailchimp' %}
             
@@ -280,9 +285,6 @@
 
             {% endif %}
 
-            <p id="powered_by_link">
-              {{ powered_by_link | replace: "shopify.com", "shopify.com/?ref=out-of-the-sandbox" }}
-            </p>
           </div>
 		    </div>
       </div>
