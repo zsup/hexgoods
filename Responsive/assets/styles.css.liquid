@@ -21,7 +21,11 @@ Description: Shopify Theme (http://www.shopify.com/?ref=out-of-the-sandbox)
 	#Tables
 	#Misc
 	#Site Styles 
-	#FlexSlider */
+	#FlexSlider
+	#Custom additions for Hex Goods
+	
+	* Note: in-line changes for Hex Goods are labeled with an EDIT comment
+*/
 
 
 /* #Reset & Basics (Inspired by E. Meyers)
@@ -167,8 +171,19 @@ abbr {
   
 /* #Links
 ================================================== */
-	a, a:visited { color: {{ settings.link_color }}; text-decoration: none; outline: 0; -webkit-transition: color 0.2s ease-out 0s; -moz-transition: color 0.2s ease-out 0s; -o-transition: color 0.2s ease-out 0s; transition: color 0.2s ease-out 0s;  }
-	a:hover, a:focus { color: {{ settings.link_hover_color }}; }
+a, a:visited {
+  color: {{ settings.link_color }};
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: color 0.2s ease-out 0s;
+  -moz-transition: color 0.2s ease-out 0s;
+  -o-transition: color 0.2s ease-out 0s;
+  transition: color 0.2s ease-out 0s;
+}
+
+a:hover, a:focus {
+  color: {{ settings.link_hover_color }};
+}
 
 /* #Lists
 ================================================== */
@@ -206,11 +221,14 @@ ul li {
   {% if settings.use_custom_top_bar_image %}
 	  background-image: url("{{ settings.custom_top_bar_image_select | asset_url }}");
 	{% endif %}
-	
+
+  text-align:center;
+
+  /* EDIT: Remove the drop-shadows
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  text-align:center;
+  */
 }
 
 .top_bar .container {
@@ -231,7 +249,9 @@ ul li {
   color: {{ settings.top_bar_color}};
   
   letter-spacing: 1px;
+  /* EDIT: Remove text-shadow
   text-shadow: 0px 1px 1px rgba(0, 0, 0, .4);
+  */
   display:block;
   height: 30px;
   line-height: 30px;
@@ -270,8 +290,9 @@ ul li {
 
 .top_bar ul li {
   float:right;
-  border-right: 1px solid rgba(58, 67, 68, .2);
-  border-left: 1px solid rgba(27, 32, 34, .3);
+  /* EDIT: Remove left and right borders */
+  /* border-right: 1px solid rgba(58, 67, 68, .2); */
+  /* border-left: 1px solid rgba(27, 32, 34, .3); */
   border-bottom: 0;
   border-top: 0;
   padding: 0 15px;
