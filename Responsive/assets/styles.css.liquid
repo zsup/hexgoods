@@ -113,7 +113,7 @@ abbr {
   
   .logo a, .logo a:hover, .logo a:visited, .logo a:active {
     color: {{ settings.logo_color }};    
-    line-height: 45px;
+    line-height: 30px;
   }
 
 	h1, h2, h3, h4, h5, h6, .title a { 
@@ -439,7 +439,7 @@ ul li {
 	are children of the grid that you want to resize with grid. 
 */
 
-	.product_row img, .product_image_col img, .article img, .section img { 
+	.product_row img, .product_image_col img, .article img, .section img, .horizontal_logo img { 
 		max-width: 100%;
 		height: auto; }
 
@@ -1371,4 +1371,9 @@ ul li {
 	padding: 0;
 	border-bottom: none;
 	line-height: 36px;
+}
+
+.spacer {
+	height: 1px;
+	line-height: 0px;
 }

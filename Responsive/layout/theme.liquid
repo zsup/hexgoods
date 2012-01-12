@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
   
-    <title>{% if template contains "index" %}{{ pages[settings.homepage].title }}{% elsif template contains "404" %}Page Not Found{% else %}{{ page_title | escape }}{% endif %}{% if current_page != 1 %} Page {{ current_page }}{% endif %} | {{ shop.name }}</title>
+    <title>{% if template contains "index" %}New and unique products from independent designers{% elsif template contains "404" %}Page Not Found{% else %}{{ page_title | escape }}{% endif %}{% if current_page != 1 %} Page {{ current_page }}{% endif %} | {{ shop.name }}</title>
     
     {% if template contains "product" %}
       <meta property="og:title" content="{{ product.title }}" />
@@ -128,22 +128,36 @@
       {% if settings.header_share_button %}
         {% include "social-buttons" with "global" %}
       {% endif %}
-      
+
+      		{% if template contains "index" %}
+
 			<div class="sixteen columns logo">
-					<a href="/">
-					  {% if settings.use_logo %}
-              <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" />
-            {% else %}
-              {{ shop.name }}
-            {% endif %}
-					</a>
+				<a href="/">
+					{% if settings.use_logo %}
+						<img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" />
+					{% else %}
+						{{ shop.name }}
+					{% endif %}
+				</a>
 			</div>
-			
-			{% if template contains "index" %}
+
 				<div class="sixteen columns tagline clearfix">
 					<h1>New and unique products from independent designers</h1>
 				</div>
-			{% endif %}
+			{% else %}
+			
+			<div class="five columns spacer">&nbsp;</div>
+			<div class="six columns logo">
+				<a href="/">
+					{% if settings.use_logo %}
+						<img src="{{ 'logo_horizontal.png' | asset_url }}" alt="{{ shop.name }}" />
+					{% else %}
+						{{ shop.name }}
+					{% endif %}
+				</a>
+			</div>
+			
+			{% endif %}	
 			
 			<div class="sixteen columns clearfix">
 				<div id="nav">
@@ -276,7 +290,7 @@
                      {% endfor %}
                    {% endif %}
 
-                   <input type="hidden" id="contact_tags" name="contact[tags]" value="prospect,newsletter"/>
+                   <input type="hidden" id="contact_tags" name="contact[tags]" value="newsletter"/>
                    <input type="email" id="contact_email" name="contact[email]" required pattern="[^ @]*@[^ @]*" placeholder="Email address" />
                    <input type='submit' class="submit" value="Sign Up" />
                  {% endform %}
