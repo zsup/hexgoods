@@ -1,10 +1,11 @@
 {% capture buttons %}
-  <span class="facebookcont"><iframe src="https://www.facebook.com/plugins/like.php?app_id=135286413216137&amp;href={{ shop.url }}{% if social-buttons == 'article' %}{{ article.url }}{% else %}{{ product.url }}{% endif %}&amp;send=false&amp;layout=button_count&amp;width=85&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe></span>
-  <span class="twittercont" style="display:inline-block; width:80px"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></span>
-  <span class="pinterestcont" style="display:inline-block; width:60px"><a href="http://pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ product.featured_image.src | product_img_url: 'grande'}}&description={{ product.title }}, by {{ product.vendor }}. {{ product.price | money }}" class="pin-it-button" count-layout="none">Pin It</a>
+  <span class="pinterestcont" style="display:inline-block;width:60px"><a href="http://pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ product.featured_image.src | product_img_url: 'grande'}}&description={{ product.title }}, by {{ product.vendor }}. {{ product.price | money }}" class="pin-it-button" count-layout="horizontal">Pin It</a>
 {{ 'pinit.js' | asset_url | script_tag }}
 <!-- <script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>--></span>
-  <span class="plusonecont" style="display:inline-block; width:50px;"><g:plusone size="medium"></g:plusone></span>
+  <span class="facebookcont"><iframe src="https://www.facebook.com/plugins/like.php?app_id=135286413216137&amp;href={{ shop.url }}{% if social-buttons == 'article' %}{{ article.url }}{% else %}{{ product.url }}{% endif %}&amp;send=false&amp;layout=button_count&amp;width=85&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:20px;" allowTransparency="true"></iframe></span>
+  <span class="twittercont" style="display:inline-block; width:85px"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></span>
+
+  <span class="plusonecont" style="display:inline-block; width:50px;"><g:plusone size="medium" annotation="bubble"></g:plusone></span>
 {% endcapture %}
 
 
