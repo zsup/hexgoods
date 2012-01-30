@@ -292,7 +292,7 @@
 
                    <input type="hidden" id="contact_tags" name="contact[tags]" value="newsletter"/>
                    <input type="email" id="contact_email" name="contact[email]" required pattern="[^ @]*@[^ @]*" placeholder="Email address" />
-                   <input type='submit' class="submit" value="Sign Up" />
+                   <input type='submit' class="submit" value="Sign Up" onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Sign-up']);"/>
                  {% endform %}
 
               {% endif %}
