@@ -62,13 +62,7 @@
     
     </div>
   
-    {% if collection.description != blank %}
-      <div class"section clearfix">
-        <div class="sixteen columns alpha omega feature_text">
-          {{ collection.description }}
-        </div>
-      </div>
-    {% endif %}
+
       
   </div>
 
@@ -82,4 +76,13 @@
       {% include 'product-loop' %}
       {% include 'pagination' %}
     {% endif %}
+
+    {% if collection.description != blank %}
+      <div class"section clearfix">
+        <div class="sixteen columns alpha omega feature_text">
+          {{ collection.description }}
+        </div>
+      </div>
+    {% endif %}
+
 {% endpaginate %}
