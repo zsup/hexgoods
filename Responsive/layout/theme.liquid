@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
+<meta name="google-site-verification" content="lXvK5P0a6vVwMSFo7v6zcRNDR7nblbXZ0UlTXHJesio" />
   
     <title>{% if template contains "index" %}New and unique products from independent designers{% elsif template contains "404" %}Page Not Found{% else %}{{ page_title | escape }}{% endif %}{% if current_page != 1 %} Page {{ current_page }}{% endif %} | {{ shop.name }}</title>
     
@@ -79,6 +80,7 @@
     <!-- jQuery and jQuery fallback -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write("<script src='{{ jquery-1.7.1.min.js | asset_url }}'>\x3C/script>")</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 		{{ 'app.js' | asset_url | script_tag }}
 		
     {{ content_for_header }}

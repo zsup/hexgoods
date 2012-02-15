@@ -1,3 +1,15 @@
+<div class="woahbar" style="display:none">
+   
+	<span>
+		Sign up to be a Hex Goods ambassador; tell your friends about Hex Goods and earn rewards! <a href="http://hexgoods.zferral.com">Click here</a>
+	</span>
+	
+    <a class="close-notify" onclick="woahbar_hide();"><img class="woahbar-up-arrow" src="{{ 'woahbar-up-arrow.png' | asset_url }}"></a>
+</div>
+<div class="woahbar-stub" style="display:none">
+    <a class="show-notify" onclick="woahbar_show();"><img class="woahbar-down-arrow" src="{{ 'woahbar-down-arrow.png' | asset_url }}"></a>
+</div>
+
 {% if settings.slideshow_enabled %}
 
   <div class="sixteen columns">
@@ -113,3 +125,7 @@
   	</div>
   </div>
 {% endif %}
+
+<!-- Woahbar -->
+
+		{{ 'woahbar.js' | asset_url | script_tag }}
