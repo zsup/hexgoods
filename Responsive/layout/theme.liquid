@@ -316,5 +316,9 @@
       <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>        
     {% endif %}
 
+	<script>
+	jQuery('a[href^="http"]').not('a[href^="{{ shop.url }}"]').attr('target', '_blank');
+	</script>
+
   </body>
 </html>
